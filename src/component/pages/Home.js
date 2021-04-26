@@ -33,6 +33,7 @@ const Home = () => {
           width: "100%",
           left: "50%",
           top: "50%",
+          height: "100vh",
           objectFit: "cover",
           transform: "translate(-50%, -50%)",
           zIndex: "-1",
