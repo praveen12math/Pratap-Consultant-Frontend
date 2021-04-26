@@ -65,9 +65,11 @@ const Testimonial = () => {
   return (
     <div className="jobrequest">
       <h4>Testimonial {" "}
-      <a href="" data-target="testimonialModal" className="modal-trigger">
-          <i className="fas fa-plus orange-text"></i>
-        </a>
+      <span href="" data-target="testimonialModal" className="modal-trigger">
+          <i className="fas fa-plus orange-text"
+          style={{cursor:"pointer"}}
+          />
+        </span>
       </h4>
       
       <div className="row">
@@ -75,11 +77,11 @@ const Testimonial = () => {
           <div className="col s12 m3">
             <div className="card blue-grey darken-1">
               <div className="card-content white-text">
-                <a>
+                <span>
                   <i className="right fas fa-trash orange-text" onClick={() => {onRemove(datas._id)}} 
                     style={{cursor:"pointer"}}
                   />
-                </a><br/>
+                </span><br/>
                 <div className="card-image">
     <img src={`${process.env.REACT_APP_BACKENDAPI}${datas.photo}`} alt="" style={{height:"200px"}}/>
 

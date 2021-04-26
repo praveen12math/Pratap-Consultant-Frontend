@@ -5,11 +5,11 @@ import M from "materialize-css/dist/js/materialize.min.js";
 const Header = () => {
   document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".sidenav");
-    var instances = M.Sidenav.init(elems, {});
+     M.Sidenav.init(elems, {});
   });
 
-  return (
-    <>
+
+  return (    <>
       <div className="navbar-fixed">
         <nav className="black ">
           <div className="nav-wrapper">
@@ -40,15 +40,15 @@ const Header = () => {
       <ul id="slide-out" className="sidenav">
         <li>
           <div className="user-view">
-            <a href="#user">
-              <img className="" src="./img/pc1.png" />
-            </a>
-            <a href="#name">
+            <Link to="/">
+              <img src="./img/pc1.png" alt=""/>
+            </Link>
+            <div>
               <span className="white-black name">John Doe</span>
-            </a>
-            <a href="#email">
+            </div>
+            <div>
               <span className="white-black email">john@pratap.com</span>
-            </a>
+            </div>
           </div>
         </li>
         <li>

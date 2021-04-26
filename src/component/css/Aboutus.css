@@ -13,21 +13,10 @@
 
 }
 
-.aboutus .text1{
-  /* text-align: justify; */
-}
-
 .aboutus .row{
   margin-bottom: 0;
 }
 
-
-@media only screen and (min-width: 768px) {
-  .aboutus .text1 {
-    /* margin-top: 20px; */
-  }
-  
-}
 
 @media only screen and (max-width: 768px){
   .aboutus .image1{

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HieringHome = () => {
   const [data, setData] = useState([]);
@@ -25,7 +26,7 @@ const HieringHome = () => {
             <div className="card blue-grey darken-1 hoverable hieringcard">
               <div className="card-action center">
                 <span className="card-title">
-                  <a>{datas.role}</a>
+                  <Link> {datas.role}</Link>
                 </span>
               </div>
             </div>

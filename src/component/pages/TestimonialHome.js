@@ -29,7 +29,7 @@ const TestimonialHome = () => {
      {data.map((datas) => (
 
       <div>
-                    <img src={`http://localhost:8000/api/${datas.photo}`}/>
+                    <img src={`${process.env.REACT_APP_BACKENDAPI}${datas.photo}`} alt=""/>
                     <p className="legend white-text">{datas.description}</p>
                 </div> 
 
@@ -43,85 +43,3 @@ const TestimonialHome = () => {
 
 export default TestimonialHome;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* <div
-className="carousel center-align"
-style={{ overflow: "visible", top: "-60px" }}
->
-<div className="carousel-item">
-  <div className="card" style={{ width: "270px" }}>
-    <div className="card-image">
-      <img className="center-align" src={user1img} alt="" />
-    </div>
-    <div className="card-content white-dark">
-      <p>
-        I am a very simple card. I am good at containing small bits of
-        information. I am convenient because I require little markup to
-        use effectively.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div className="carousel-item">
-  <div className="card" style={{ width: "270px" }}>
-    <div className="card-image">
-      <img className="center-align" src={user2img} alt="" />
-    </div>
-    <div className="card-content white-dark">
-      <p>
-        I am a very simple card. I am good at containing small bits of
-        information. I am convenient because I require little markup to
-        use effectively.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div className="carousel-item">
-  <div className="card" style={{ width: "270px" }}>
-    <div className="card-image">
-      <img className="center-align" src={user3img} alt="" />
-    </div>
-    <div className="card-content white-dark">
-      <p>
-        I am a very simple card. I am good at containing small bits of
-        information. I am convenient because I require little markup to
-        use effectively.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div className="carousel-item">
-  <div className="card" style={{ width: "270px" }}>
-    <div className="card-image">
-      <img className="center-align" src={user4img} alt="" />
-    </div>
-    <div className="card-content white-dark">
-      <p>
-        I am a very simple card. I am good at containing small bits of
-        information. I am convenient because I require little markup to
-        use effectively.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-</div> */}

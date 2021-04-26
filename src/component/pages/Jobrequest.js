@@ -41,11 +41,11 @@ const Jobrequest = () => {
           <div className="col s12 m3">
             <div className="card blue-grey darken-1">
               <div className="card-content white-text">
-                <a>
+                <span>
                   <i className="right fas fa-trash orange-text" onClick={() => {onRemove(datas._id)}}
                     style={{cursor:"pointer"}}
                   />
-                </a>
+                </span>
                 <span className="card-title">{datas.name}</span>
                 Email : <span className="orange-text">{datas.email} </span>
                 <br />

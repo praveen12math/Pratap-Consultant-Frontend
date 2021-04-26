@@ -5,7 +5,7 @@ import M from "materialize-css/dist/js/materialize.min.js";
 const Hiering = () => {
   document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll(".modal");
-    var instances = M.Modal.init(elems, {});
+    M.Modal.init(elems, {});
   });
 
   const [data, setData] = useState([]);
@@ -56,21 +56,23 @@ const Hiering = () => {
     <div className="jobrequest">
       <h4>
         Hiering Open{" "}
-        <a href="" data-target="modal1" className="modal-trigger">
-          <i className="fas fa-plus orange-text"></i>
-        </a>
+        <span data-target="modal1" className="modal-trigger">
+          <i className="fas fa-plus orange-text"
+          style={{cursor:"pointer"}}
+          />
+        </span>
       </h4>
       <div className="row">
         {data.map((datas) => (
           <div className="col s12 m3">
             <div className="card blue-grey darken-1">
               <div className="card-content white-text">
-                <a>
+                <span>
                   {" "}
                   <i className="right fas fa-trash orange-text" onClick={ () => {onRemove(datas._id)}}
                     style={{cursor:"pointer"}}
                   ></i>
-                </a>
+                </span>
                 <span className="card-title">{datas.role}</span>
               </div>
             </div>
@@ -89,7 +91,7 @@ const Hiering = () => {
           </div>
         </div>
         <div className="modal-footer">
-          <a className="modal-close waves-effect waves-green btn-flat" onClick={onSubmit}>Add</a>
+          <button className="modal-close waves-effect waves-green btn-flat" onClick={onSubmit}>Add</button>
         </div>
       </div>
     </div>
