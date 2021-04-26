@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Acme", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500&display=swap");
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 55%;
+  }
+}
+
+nav ul a {
+  font-size: 1.2rem;
+}

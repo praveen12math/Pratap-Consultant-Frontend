@@ -1,0 +1,53 @@
+.homeBody1 {
+  height: 100vh;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
+.page-footer {
+  margin-top: 150px;
+}
+
+.footericon {
+  margin-top: 100px;
+}
+.footer-copyright {
+  margin-top: 100px;
+}
+
+.fab {
+  font-size: 3rem;
+  margin-right: 50px;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+.row {
+  margin-bottom: 0px;
+}
+
+
+@media only screen and (min-width: 768px){
+  .carousel .slide img {
+    width: 31% !important;
+  }
+}

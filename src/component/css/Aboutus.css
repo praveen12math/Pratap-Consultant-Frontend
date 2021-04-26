@@ -1,0 +1,36 @@
+.aboutus {
+  background-color: black;
+}
+
+.aboutus .image1 {
+  position: fixed;
+  height: 100%;
+}
+
+.aboutus .image2 {
+  position: fixed;
+  height: 100%;
+
+}
+
+.aboutus .text1{
+  /* text-align: justify; */
+}
+
+.aboutus .row{
+  margin-bottom: 0;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .aboutus .text1 {
+    /* margin-top: 20px; */
+  }
+  
+}
+
+@media only screen and (max-width: 768px){
+  .aboutus .image1{
+    opacity: 0.3;
+  }
+}

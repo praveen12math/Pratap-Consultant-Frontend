@@ -1,0 +1,11 @@
+@media (min-width: 576px) {
+  .pagenotfoundImage {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .pagenotfoundImage {
+    width: 100%;
+  }
+}
