@@ -22,7 +22,11 @@ const Footer = () => {
 
 
   return (
-    <footer class="page-footer">
+    <div className="footer">
+    <footer class="page-footer"
+    style={{backgroundColor:"#263238"}}
+    >
+      {/* <hr/> */}
     <ToastContainer position="bottom-right" />
       <div class="container">
         <div class="row">
@@ -72,6 +76,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </div>
   );
 };
 

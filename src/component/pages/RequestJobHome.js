@@ -88,7 +88,7 @@ const RequestJob = () => {
 
           </div>
           <div className="center-align">
-<button className="waves-effect waves-light btn" onClick={onSubmit}>button</button>
+<button className="waves-effect waves-light btn" onClick={onSubmit}>Send</button>
 </div>
           </div>
         </form>
