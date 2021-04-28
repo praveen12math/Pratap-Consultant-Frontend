@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 import image from "../img/hand3.jpg";
-import jwt from "jsonwebtoken"
+import jwt from "jsonwebtoken";
 import { Redirect } from "react-router";
 
 const Login = () => {
-
   const [login, setLogin] = useState();
 
-
-if(localStorage.getItem("jwt")){
-  return(
-    <Redirect to="/admin"/>
-  )
-}
+  if (localStorage.getItem("jwt")) {
+    return <Redirect to="/admin" />;
+  }
 
   console.log(login);
 
   if (login === "imadminveer") {
-    const token = jwt.sign({_id: '123'}, 'hello')
-    localStorage.setItem("jwt",token)
+    const token = jwt.sign({ _id: "123" }, "hello");
+    localStorage.setItem("jwt", token);
   } else {
     return (
       <div>

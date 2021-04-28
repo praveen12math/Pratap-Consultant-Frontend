@@ -9,7 +9,6 @@ const HieringHome = () => {
       const api = `${process.env.REACT_APP_BACKENDAPI}/getallhiering`;
       const result = await fetch(api);
       const getReasult = await result.json();
-      //  console.log(getReasult);
       setData(getReasult);
     }
     getData();

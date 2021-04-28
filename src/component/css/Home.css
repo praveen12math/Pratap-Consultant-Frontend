@@ -45,8 +45,7 @@ html {
   margin-bottom: 100px !important;
 }
 
-
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .carousel .slide img {
     width: 31% !important;
   }

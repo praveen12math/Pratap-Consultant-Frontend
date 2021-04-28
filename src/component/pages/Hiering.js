@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {addHiering} from "../Adddata/adddata"
+import { addHiering } from "../Adddata/adddata";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 const Hiering = () => {
@@ -14,7 +14,6 @@ const Hiering = () => {
     const api = `${process.env.REACT_APP_BACKENDAPI}/getallhiering`;
     const result = await fetch(api);
     const getReasult = await result.json();
-    //  console.log(getReasult);
     setData(getReasult);
   }
 
@@ -22,43 +21,41 @@ const Hiering = () => {
     getData();
   }, []);
 
-  const [addrole, setAddrole] = useState()
+  const [addrole, setAddrole] = useState();
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+    addHiering({ role: addrole })
+      .then((resData) => {
+        if (resData.error) {
+          console.log(resData.error);
+        }
+        getData();
+      })
+      .catch(console.log("Error in add role"));
+  };
 
-  const onSubmit = event => {
-    event.preventDefault()
-    addHiering({role: addrole})
-    .then(resData => {
-      if(resData.error){
-        console.log(resData.error);
-      }
-      getData()
-    })
-    .catch(console.log("Error in add role"))
-  }
-
-  const onRemove = id => {
-    return fetch(`${process.env.REACT_APP_BACKENDAPI}/hiering/${id}` , {
+  const onRemove = (id) => {
+    return fetch(`${process.env.REACT_APP_BACKENDAPI}/hiering/${id}`, {
       method: "DELETE",
       headers: {
-        Accept: "application/json"
-      }
+        Accept: "application/json",
+      },
     })
-    .then(response => {
-      return getData()
-    })
-    .catch(err => console.log(err))
-
-  }
-
+      .then((response) => {
+        return getData();
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="jobrequest">
       <h4>
         Hiering Open{" "}
         <span data-target="modal1" className="modal-trigger">
-          <i className="fas fa-plus orange-text"
-          style={{cursor:"pointer"}}
+          <i
+            className="fas fa-plus orange-text"
+            style={{ cursor: "pointer" }}
           />
         </span>
       </h4>
@@ -69,8 +66,12 @@ const Hiering = () => {
               <div className="card-content white-text">
                 <span>
                   {" "}
-                  <i className="right fas fa-trash orange-text" onClick={ () => {onRemove(datas._id)}}
-                    style={{cursor:"pointer"}}
+                  <i
+                    className="right fas fa-trash orange-text"
+                    onClick={() => {
+                      onRemove(datas._id);
+                    }}
+                    style={{ cursor: "pointer" }}
                   ></i>
                 </span>
                 <span className="card-title">{datas.role}</span>
@@ -85,13 +86,22 @@ const Hiering = () => {
           <h4>Add Hiering Open</h4>
           <div className="row">
             <div className="input-field col s12">
-              <input type="text" className="validate" value={addrole}
-            onChange={(e) => setAddrole(e.target.value)} />
+              <input
+                type="text"
+                className="validate"
+                value={addrole}
+                onChange={(e) => setAddrole(e.target.value)}
+              />
             </div>
           </div>
         </div>
         <div className="modal-footer">
-          <button className="modal-close waves-effect waves-green btn-flat" onClick={onSubmit}>Add</button>
+          <button
+            className="modal-close waves-effect waves-green btn-flat"
+            onClick={onSubmit}
+          >
+            Add
+          </button>
         </div>
       </div>
     </div>

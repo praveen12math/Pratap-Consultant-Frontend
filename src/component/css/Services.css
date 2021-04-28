@@ -1,45 +1,45 @@
-.services .main-h{
-    margin :0
+.services .main-h {
+  margin: 0;
 }
 
-.services{
-    background-color: black;
+.services {
+  background-color: black;
 }
 
-.row{
-    margin-bottom: 0px !important;
+.row {
+  margin-bottom: 0px !important;
 }
 
-.services .line1{
+.services .line1 {
+  border-left: 2px solid white;
+  height: 50px;
+  margin-right: 10px;
+  left: 16.6%;
+  position: absolute;
+}
+@media only screen and (max-width: 768px) {
+  .services .line1 {
     border-left: 2px solid white;
     height: 50px;
     margin-right: 10px;
-    left: 16.6%;
+    left: 11%;
     position: absolute;
-}
-@media only screen and (max-width: 768px){
-    .services .line1{
-        border-left: 2px solid white;
-        height: 50px;
-        margin-right: 10px;
-        left: 11%;
-        position: absolute;
-    }
   }
+}
 
-  .services .line2{
-    border-left: 2px solid white;
-    height: 50px;
-    margin-right: 10px;
-    left: 16.6%;
-    position: absolute;
+.services .line2 {
+  border-left: 2px solid white;
+  height: 50px;
+  margin-right: 10px;
+  left: 16.6%;
+  position: absolute;
 }
-@media only screen and (max-width: 768px){
-    .services .line2{
-        border-left: 2px solid white;
-        height: 90px;
-        margin-right: 10px;
-        left: 11%;
-        position: absolute;
-    }
+@media only screen and (max-width: 768px) {
+  .services .line2 {
+    border-left: 2px solid white;
+    height: 90px;
+    margin-right: 10px;
+    left: 11%;
+    position: absolute;
   }
+}

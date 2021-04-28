@@ -7,7 +7,6 @@ const Jobrequest = () => {
     getData();
   }, []);
 
-
   async function getData() {
     const api = `${process.env.REACT_APP_BACKENDAPI}/getallrequest`;
     const result = await fetch(api);
@@ -15,23 +14,18 @@ const Jobrequest = () => {
     setData(getReasult);
   }
 
-
-
-  const onRemove = id => {
-    return fetch(`${process.env.REACT_APP_BACKENDAPI}/requestJob/${id}` , {
+  const onRemove = (id) => {
+    return fetch(`${process.env.REACT_APP_BACKENDAPI}/requestJob/${id}`, {
       method: "DELETE",
       headers: {
-        Accept: "application/json"
-      }
+        Accept: "application/json",
+      },
     })
-    .then(response => {
-      return getData()
-    })
-    .catch(err => console.log(err))
-
-  }
-
-
+      .then((response) => {
+        return getData();
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="jobrequest">
@@ -42,8 +36,12 @@ const Jobrequest = () => {
             <div className="card blue-grey darken-1">
               <div className="card-content white-text">
                 <span>
-                  <i className="right fas fa-trash orange-text" onClick={() => {onRemove(datas._id)}}
-                    style={{cursor:"pointer"}}
+                  <i
+                    className="right fas fa-trash orange-text"
+                    onClick={() => {
+                      onRemove(datas._id);
+                    }}
+                    style={{ cursor: "pointer" }}
                   />
                 </span>
                 <span className="card-title">{datas.name}</span>

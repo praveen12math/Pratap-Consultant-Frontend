@@ -119,7 +119,7 @@ const Home = () => {
         </section>
 
         <section className="homeBody1">
-          <RequestJobHome/>
+          <RequestJobHome />
         </section>
 
         <section className="homeBody1">

@@ -10,16 +10,14 @@
 .aboutus .image2 {
   position: fixed;
   height: 100%;
-
 }
 
-.aboutus .row{
+.aboutus .row {
   margin-bottom: 0;
 }
 
-
-@media only screen and (max-width: 768px){
-  .aboutus .image1{
+@media only screen and (max-width: 768px) {
+  .aboutus .image1 {
     opacity: 0.3;
   }
 }

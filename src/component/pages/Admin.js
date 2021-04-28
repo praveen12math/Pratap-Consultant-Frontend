@@ -7,21 +7,15 @@ import Jobrequest from "./Jobrequest";
 import Testimonial from "./Testimonial";
 
 const Admin = () => {
+  const history = useHistory();
 
-
-  const history = useHistory()
-
-
-  if(!localStorage.getItem("jwt")){
-    return(
-      <Redirect to="/" />
-    )
+  if (!localStorage.getItem("jwt")) {
+    return <Redirect to="/" />;
   }
 
-
-  function signout(){
+  function signout() {
     localStorage.removeItem("jwt");
-      history.push("/")
+    history.push("/");
   }
 
   return (
